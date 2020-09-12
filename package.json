@@ -1,24 +1,30 @@
 {
-  "name": "my-cli",
-  "version": "1.0.0",
-  "description": "",
+  "name": "basis-web-cli",
+  "version": "1.0.4",
+  "description": "基建基础框架",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "basis-web-cli created Demo"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "basis",
+    "cli",
+    "demo"
+  ],
+  "author": "HenryTSZ",
   "license": "ISC",
   "bin": {
-    "my-cli": "index.js"
+    "basis-web-cli": "bin/index.js"
   },
   "dependencies": {
     "chalk": "^4.1.0",
-    "commander": "^6.1.0",
+    "commander": "^6.0.0",
     "download-git-repo": "^3.0.2",
     "fs-extra": "^9.0.1",
     "inquirer": "^7.3.3",
-    "ora": "^5.1.0",
-    "replace-in-file": "^6.1.0"
+    "log-symbols": "^4.0.0",
+    "ora": "^4.0.5",
+    "replace-in-file": "^6.1.0",
+    "rimraf": "^3.0.2"
   }
 }

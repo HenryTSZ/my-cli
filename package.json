@@ -1,6 +1,6 @@
 {
   "name": "basis-web-cli",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "基建基础框架",
   "main": "index.js",
   "scripts": {

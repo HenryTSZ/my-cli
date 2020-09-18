@@ -1,3 +1,4 @@
+const { fromEntries } = require('../utils')
 const list = [
   {
     name: 'BridgeProduction(桥梁)',
@@ -47,10 +48,10 @@ const list = [
 
 exports.PROJECT_LIST = list.map(({ name, value }) => ({ name, value }))
 
-exports.PATH_MAP = Object.fromEntries(list.map(({ value, path }) => ({ [value]: path })))
+exports.PATH_MAP = fromEntries(list.map(({ value, path }) => [value, path]))
 
-exports.API_MAP = Object.fromEntries(list.map(({ value, api }) => ({ [value]: api })))
+exports.API_MAP = fromEntries(list.map(({ value, api }) => [value, api]))
 
 exports.REPLACE_KEYWORDS = [/replaceProjectTitle/g, /replaceBaseApi/g, /replaceOutputDir/g]
 
-exports.ICO_NAME_MAP = Object.fromEntries(list.map(({ value, ico }) => ({ [value]: ico })))
+exports.ICO_NAME_MAP = fromEntries(list.map(({ value, ico }) => [value, ico]))

@@ -7,7 +7,7 @@ const ora = require('ora')
 
 const { existsSync, loadAllFiles, replaceKeywords, replaceIco } = require('../utils/file')
 const checkPath = require('../utils/checkPath')
-const { API_MAP } = require('../constant')
+const { PROJECT_LIST, API_MAP } = require('../constant')
 
 program
   .version(`basis-web-cli ${require('../package').version}`)
@@ -20,11 +20,7 @@ program
         type: 'rawlist',
         message: `Please choose a projectType:`,
         default: 'BridgeProduction',
-        choices: [
-          { name: 'BridgeProduction(桥梁)', value: 'BridgeProduction' },
-          { name: 'BaseProduction(基建项目)', value: 'BaseProduction' },
-          { name: 'EnterpriseProduction(基建企业)', value: 'EnterpriseProduction' }
-        ]
+        choices: PROJECT_LIST
       },
       {
         name: 'projectTitle',

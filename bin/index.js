@@ -19,7 +19,7 @@ program
   .command('t [name]')
   .description('Compressed images under the current folder')
   .action(name => {
-    console.log(chalk.green(figlet.textSync('tiny-pic!', { horizontalLayout: 'full' })))
+    console.log(chalk.green(figlet.textSync('tiny-photo-cli!', { horizontalLayout: 'full' })))
     const imgs = loadImgFiles()
     if (!imgs.length) {
       console.log(chalk.red(`${figures.cross} 当前文件夹下暂无 jpg / png 图片`))

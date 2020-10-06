@@ -1,9 +1,9 @@
 {
-  "name": "tiny-pic",
+  "name": "tiny-photo-cli",
   "version": "1.0.0",
   "description": "Compressed images under the current folder",
   "keywords": [
-    "tiny-pic",
+    "tiny-photo-cli",
     "tinyjpg",
     "tinypng"
   ],

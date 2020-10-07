@@ -19,7 +19,7 @@ program
   .command('t [name]')
   .description('Compressed images under the current folder')
   .action(name => {
-    console.log(chalk.green(figlet.textSync('tiny-photo-cli!', { horizontalLayout: 'full' })))
+    console.log(chalk.green(figlet.textSync('tiny-photo-cli')))
     const imgs = loadImgFiles()
     if (!imgs.length) {
       console.log(chalk.red(`${figures.cross} 当前文件夹下暂无 jpg / png 图片`))
@@ -66,7 +66,7 @@ async function compressImg(name = '', { original, buffer }) {
     const oldSize = chalk.redBright(ByteSize(obj.input.size))
     const newSize = chalk.greenBright(ByteSize(obj.output.size))
     const ratio = chalk.blueBright(RoundNum(1 - obj.output.ratio, 2, true))
-    const output = path.join(name, path.basename(original))
+    const output = name ? path.join(name, path.basename(original)) : original
     const compressPath = name ? `, 压缩后路径 ${output}` : ''
     const msg = `${figures.tick} 压缩 [${chalk.yellowBright(original)}] ${chalk.green(
       '成功'

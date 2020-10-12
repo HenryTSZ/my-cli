@@ -9,7 +9,10 @@ const list = [
       BridgeProduction: ''
     },
     api: 'apiB',
-    ico: 'bridgeProduction'
+    ico: 'bridgeProduction',
+    routePath: '/:projectId',
+    homeType: 'P',
+    openPage: '315035493904896'
   },
   {
     name: 'DecisionProduction(决策)',
@@ -19,8 +22,11 @@ const list = [
       'source-web': 'DecisionProduction',
       DecisionProduction: ''
     },
-    api: 'apiB',
-    ico: 'decisionProduction'
+    api: 'apiD',
+    ico: 'decisionProduction',
+    routePath: '/:tenantId/:orgId/:project',
+    homeType: 'TOP',
+    openPage: '315035493904896/315116722885120/true'
   },
   {
     name: 'BaseProduction(基建项目)',
@@ -31,7 +37,10 @@ const list = [
       BaseProduction: ''
     },
     api: 'apiP',
-    ico: 'baseProduction'
+    ico: 'baseProduction',
+    routePath: '/:projectId',
+    homeType: 'P',
+    openPage: '315116722885120'
   },
   {
     name: 'EnterpriseProduction(基建企业)',
@@ -42,7 +51,10 @@ const list = [
       EnterpriseProduction: ''
     },
     api: 'apiP',
-    ico: 'baseProduction'
+    ico: 'baseProduction',
+    routePath: '/:projectId',
+    homeType: 'P',
+    openPage: '315116722885120'
   }
 ]
 
@@ -52,6 +64,18 @@ exports.PATH_MAP = fromEntries(list.map(({ value, path }) => [value, path]))
 
 exports.API_MAP = fromEntries(list.map(({ value, api }) => [value, api]))
 
-exports.REPLACE_KEYWORDS = [/replaceProjectTitle/g, /replaceBaseApi/g, /replaceOutputDir/g]
+exports.ROUTE_PATH_MAP = fromEntries(list.map(({ value, routePath }) => [value, routePath]))
+
+exports.OPEN_PAGE_MAP = fromEntries(list.map(({ value, openPage }) => [value, openPage]))
+
+exports.REPLACE_KEYWORDS = [
+  /replaceProjectTitle/g,
+  /replaceBaseApi/g,
+  /replaceOutputDir/g,
+  /replaceRoutePath/g,
+  /replaceOpenPage/g
+]
 
 exports.ICO_NAME_MAP = fromEntries(list.map(({ value, ico }) => [value, ico]))
+
+exports.HOME_TYPE_MAP = fromEntries(list.map(({ value, homeType }) => [value, homeType]))

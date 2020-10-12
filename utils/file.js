@@ -6,7 +6,7 @@ const path = require('path')
 const replace = require('replace-in-file')
 const rimraf = require('rimraf')
 
-const { REPLACE_KEYWORDS, ICO_NAME_MAP } = require('../constant')
+const { REPLACE_KEYWORDS, ICO_NAME_MAP, HOME_TYPE_MAP } = require('../constant')
 
 exports.existsSync = async name => {
   if (fs.existsSync(name)) {
@@ -71,6 +71,17 @@ exports.replaceIco = (filePath, type) => {
   )
   // 删除多余的 .png 图片
   rimraf(path.join(filePath, 'public/*.png'), err => {
+    if (err) {
+      console.log(symbols.warning, chalk.red(err))
+    }
+  })
+}
+
+exports.replaceHome = (filePath, type) => {
+  const homePath = path.join(filePath, 'src/views')
+  fs.rename(path.join(homePath, `${HOME_TYPE_MAP[type]}.txt`), path.join(homePath, 'Home.vue'))
+  // 删除该文件夹下多余的 .txt 文件
+  rimraf(path.join(homePath, '*.txt'), err => {
     if (err) {
       console.log(symbols.warning, chalk.red(err))
     }

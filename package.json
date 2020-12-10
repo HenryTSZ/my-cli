@@ -1,7 +1,7 @@
 {
   "name": "basis-web-cli",
   "version": "1.0.7",
-  "description": "基建基础框架",
+  "description": "基础框架",
   "main": "index.js",
   "scripts": {
     "start": "basis-web-cli created Demo"

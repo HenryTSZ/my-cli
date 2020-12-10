@@ -37,7 +37,7 @@ program
     // 判断目录是否已存在
     await existsSync(dirPath)
     const spinner = ora('Take it easy :）Is downloading the template...').start()
-    download('HenryTSZ/GlodonBasisWebDemo', dirPath, err => {
+    download('HenryTSZ/basisWebDemo', dirPath, err => {
       if (err) {
         spinner.fail(`Download failed: ${err}`)
       } else {

@@ -4,7 +4,7 @@
   "description": "基础框架",
   "main": "index.js",
   "scripts": {
-    "start": "basis-web-cli created Demo"
+    "start": "bwc created Demo"
   },
   "keywords": [
     "basis",
@@ -14,7 +14,7 @@
   "author": "HenryTSZ",
   "license": "ISC",
   "bin": {
-    "basis-web-cli": "bin/index.js"
+    "bwc": "bin/index.js"
   },
   "dependencies": {
     "chalk": "^4.1.0",

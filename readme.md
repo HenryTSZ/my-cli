@@ -2,9 +2,9 @@
 
 1. 全局安装基础脚手架: `npm i basis-web-cli -g`
 
-2. 运行命令: `basis-web-cli create <app-name>` 创建新项目.
+2. 运行命令: `bwc create <AppName>` 创建新项目.
 
-    - **`app-name` 命名方式为大驼峰**
+    - **`AppName` 命名方式为大驼峰**
 
 3. 选择项目类型
 

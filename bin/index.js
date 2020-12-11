@@ -16,7 +16,7 @@ const checkPath = require('../utils/checkPath')
 const { PROJECT_LIST, API_MAP, ROUTE_PATH_MAP, OPEN_PAGE_MAP } = require('../constant')
 
 program
-  .version(`basis-web-cli ${require('../package').version}`)
+  .version(`bwc ${require('../package').version}`)
   .command('create <app-name>')
   .description('create a new project powered by basis-web-cli')
   .action(async name => {

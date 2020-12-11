@@ -1,31 +1,17 @@
 exports.PATH_MAP = {
-  BridgeProduction: {
-    'bridge-business-web': 'source-web/BridgeProduction',
-    'source-web': 'BridgeProduction',
-    BridgeProduction: ''
+  ProjectA: {
+    'business-a': 'source-web/ProjectA',
+    'source-web': 'ProjectA',
+    ProjectA: ''
   },
-  BaseProduction: {
-    'basis-facility-web': 'bimbasisstatic/BaseProduction',
-    bimbasisstatic: 'BaseProduction',
-    BaseProduction: ''
+  ProjectB: {
+    'business-b': 'source-web/ProjectB',
+    'source-web': 'ProjectB',
+    ProjectB: ''
   },
-  EnterpriseProduction: {
-    'basis-facility-web': 'bimbasisstatic/EnterpriseProduction',
-    bimbasisstatic: 'EnterpriseProduction',
-    EnterpriseProduction: ''
+  ProjectC: {
+    'business-c': 'source-web/ProjectC',
+    'source-web': 'ProjectC',
+    ProjectC: ''
   }
-}
-
-exports.API_MAP = {
-  BridgeProduction: 'apiB',
-  BaseProduction: 'apiP',
-  EnterpriseProduction: 'apiP'
-}
-
-exports.REPLACE_KEYWORDS = [/replaceProjectTitle/g, /replaceBaseApi/g, /replaceOutputDir/g]
-
-exports.ICO_NAME_MAP = {
-  BridgeProduction: 'bridgeProduction',
-  BaseProduction: 'baseProduction',
-  EnterpriseProduction: 'baseProduction'
 }

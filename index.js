@@ -21,12 +21,21 @@ program
       {
         name: 'template',
         type: 'rawlist',
-        message: `Please choose a template:`,
-        default: 'BridgeProduction',
+        message: 'Please choose a template:',
+        default: 'ProjectA',
         choices: [
-          { name: 'BridgeProduction(桥梁)', value: 'BridgeProduction' },
-          { name: 'BaseProduction(基建项目)', value: 'BaseProduction' },
-          { name: 'EnterpriseProduction(基建企业)', value: 'EnterpriseProduction' }
+          {
+            name: '项目 A',
+            value: 'ProjectA'
+          },
+          {
+            name: '项目 B',
+            value: 'ProjectB'
+          },
+          {
+            name: '项目 C',
+            value: 'ProjectC'
+          }
         ]
       }
     ])
@@ -35,11 +44,7 @@ program
     await existsSync(dirPath)
     const spinner = ora({
       text: 'Take it easy :）Is downloading the template...',
-      color: 'yellow',
-      spinner: {
-        interval: 80,
-        frames: ['⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏']
-      }
+      color: 'yellow'
     })
     spinner.start()
     download('HenryTSZ/hello-world', dirPath, error => {
